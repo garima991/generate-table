@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generating Table</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background: linear-gradient(135deg, #d9d69e 20%, #b0dcff 80%);
+            background-repeat: no-repeat;
+            margin: 5px;
+            width: 100%;
+        }
+
+        h1{
+            font-weight: 800;
+        }
+        
+        .table-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 30px auto;
+            padding: 45px 30px;
+            border: 4px solid rgb(24, 23, 23);
+            width:max-content
+        }
+        
+        .table-container label{
+            display: block;
+            font-size: 20px;
+            padding: 10px;
+            font-weight: 600;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            
+        }
+
+        input{
+            padding: 8px;
+            border-radius: 4px;
+            margin-left: 10px;
+            border: none;
+        }
+
+        button{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            font-size: large;
+            background-color: #0c6bb4;
+            font-family:'Times New Roman', Times, serif;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        button:hover{
+            background-color: #0b703a;
+        }
+
+        #createdTable{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <div class="table-container">
+            <h1>Creating Table using JS</h1>
+            <label for = "rows">Number of Rows : </label>
+            <input type="number" id="rows" value = "5" min = "2" required> <br><br>
+
+            <label for="cols">Number of Columns : </label>
+            <input type="number" id = "cols" value = "3" min = "2" required> <br><br>
+
+            <br>
+            <button id ="create-btn">Generate Table</button>
+        </div>
+
+        <div id = "createdTable">
+
+        </div>
+
+
+    </main>
+    <script src ="script.js"></script>
+</body>
+</html>
